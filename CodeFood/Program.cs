@@ -14,7 +14,7 @@ builder.Services.AddTransient<IServiceItemRepository, EFServiceItemRepository>()
 builder.Services.AddTransient<DataManager>();
 
 builder.Services.AddDbContext<AppDbContext>(
-    x => x.UseSqlServer(Config.ConnectionString)
+    x => x.UseSqlServer(Config.ConnectionString!)
 );
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>

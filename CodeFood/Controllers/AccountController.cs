@@ -17,11 +17,6 @@ public class AccountController : Controller
         _signInManager = signInManager;
     }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
-
     [AllowAnonymous]
     public IActionResult Login(string? returnUrl)
     {
