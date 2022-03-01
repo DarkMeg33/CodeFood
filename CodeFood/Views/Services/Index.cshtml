@@ -1,13 +1,5 @@
-﻿@model CodeFood.Domain.Entities.ServiceItem
+﻿@model TextField
 
-<div>
-    <div>
-        <p>@Model.Title</p>
-    </div>
-    <div>
-        <img src="~/images/@Model.TitleImagePath" alt="image" />
-    </div>
-    <div>
-        <p>@Model.Text</p>
-    </div>
-</div>
+@{
+    ViewBag.Title = Model.Title;
+}

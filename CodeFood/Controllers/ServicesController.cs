@@ -12,9 +12,8 @@ public class ServicesController : Controller
         _dataManager = dataManager;
     }
 
-    public IActionResult Index(Guid id)
+    public IActionResult Index()
     {
-        var entity = _dataManager.ServiceItems.GetServiceItemById(id);
-        return View(entity);
+        return View(_dataManager.TextFields.GetTextFieldByCodeWord("PageServices"));
     }
 }
